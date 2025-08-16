@@ -4,6 +4,7 @@ import { useSorteazo } from "../contexts/SorteazoContext";
 import Header from "../components/Header";
 import WhatsAppButton from "../components/WhatsAppButton";
 import CountdownTimer from "../components/CountdownTimer";
+import bg from "../../public/iamgenes/bg.png";
 
 import Footer from "../components/Footer";
 import {
@@ -23,7 +24,7 @@ const RaffleDetail = () => {
   const navigate = useNavigate();
   const { raffles, getOccupiedTicketsCount, getAvailableTicketsCount } =
     useSorteazo();
-  const [ticketCount, setTicketCount] = useState(2);
+  const [ticketCount, setTicketCount] = useState(1);
   const [isFirstPurchase, setIsFirstPurchase] = useState(true);
 
   const raffle = raffles.find((r) => r.id === id);
@@ -72,34 +73,19 @@ const RaffleDetail = () => {
   const handleTicketChange = (change: number) => {
     const newCount = ticketCount + change;
     const availableTickets = getAvailableTicketsCount(raffle);
-    
-    // Si ya tenemos 2 o más tickets, no es la primera compra
-    if (ticketCount >= 2) {
-      setIsFirstPurchase(false);
-    }
-    
-    // Mínimo siempre 2 tickets, pero incrementos de a 1
-    const minTickets = 2;
-    
+    // Mínimo siempre 1 boleto
+    const minTickets = 1;
     if (newCount >= minTickets && newCount <= availableTickets) {
       setTicketCount(newCount);
     }
   };
 
   const handlePurchase = () => {
-    if (raffle.status === "active" && ticketCount >= 2) {
+    if (raffle.status === "active" && ticketCount >= 1) {
       navigate(`/pago/${raffle.id}?tickets=${ticketCount}`);
     }
   };
 
-  const handleWhatsAppContact = () => {
-    const phoneNumber = "50672345678";
-    const message = `Hola, tengo consultas sobre el sorteo: ${raffle.title}`;
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(url, "_blank");
-  };
 
   const occupiedTicketsCount = getOccupiedTicketsCount(raffle);
   const availableTickets = getAvailableTicketsCount(raffle);
@@ -107,7 +93,7 @@ const RaffleDetail = () => {
   const soldPercentage = (occupiedTicketsCount / raffle.totalTickets) * 100;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen`} id="raffleDetail">
       <Header />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
@@ -124,7 +110,7 @@ const RaffleDetail = () => {
           {/* Left Column - Image and Countdown */}
           <div className="xl:col-span-2 space-y-4 sm:space-y-6">
             {/* Main Image */}
-            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg bg-white">
+            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg bg-white ">
               <div className="aspect-square sm:aspect-[4/3] lg:aspect-video">
                 <img
                   src={raffle.image}
@@ -145,13 +131,13 @@ const RaffleDetail = () => {
             </div>
 
             {/* Countdown Timer */}
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               <CountdownTimer targetDate={raffle.drawDate} />
             </div>
 
             {/* Mobile Title and Description */}
             <div className="xl:hidden bg-white rounded-xl shadow-lg p-4 sm:p-6">
-              <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4 ">
                 {raffle.title}
               </h1>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
@@ -163,8 +149,8 @@ const RaffleDetail = () => {
           {/* Right Column - Details and Purchase */}
           <div className="space-y-4 sm:space-y-6">
             {/* Desktop Title and Description */}
-            <div className="hidden xl:block bg-white rounded-xl shadow-lg p-6">
-              <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+            <div className="hidden xl:block bg-white rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6">
+              <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 ">
                 {raffle.title}
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -173,9 +159,9 @@ const RaffleDetail = () => {
             </div>
 
             {/* Quick Stats Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-1 gap-3 sm:gap-4">
-              <div className="bg-white p-4 sm:p-5 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center gap-3 mb-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-1 gap-3 sm:gap-4 ">
+              <div className="bg-white p-4 sm:p-5 rounded-xl  hover:shadow-xl transition-shadow duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <div className="flex items-center gap-3 mb-2 ">
                   <div className="p-2 bg-orange-100 rounded-lg">
                     <Ticket
                       className="text-orange-500 sm:w-6 sm:h-6"
@@ -190,8 +176,8 @@ const RaffleDetail = () => {
                   {formatPrice(raffle.pricePerTicket)}
                 </p>
               </div>
-              <div className="bg-white p-4 sm:p-5 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 sm:col-span-3 xl:col-span-1">
-                <div className="flex items-center gap-3 mb-2">
+              <div className="bg-white p-4 sm:p-5 rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-xl transition-shadow duration-300 sm:col-span-3 xl:col-span-1">
+                <div className="flex items-center gap-3 mb-2 ">
                   <div className="p-2 bg-green-100 rounded-lg">
                     <Calendar
                       className="text-green-500 sm:w-6 sm:h-6"
@@ -211,19 +197,17 @@ const RaffleDetail = () => {
             
             {/* Ticket Selection */}
             {raffle.status === "active" && availableTickets > 0 && (
-              <div className="bg-white p-5 sm:p-6 rounded-xl shadow-lg border-2 border-orange-200 hover:border-orange-300 transition-colors duration-300">
+              <div className="bg-white p-5 sm:p-6 rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-orange-200 hover:border-orange-300 transition-colors duration-300">
                 <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-800">
                   Selecciona tus boletos
                 </h3>
-                <p className="text-sm text-gray-600 mb-4 sm:mb-6">
-                  Mínimo 2 boletos, puedes agregar o quitar de a 1
-                </p>
+                
 
                 {/* Ticket Counter */}
                 <div className="flex items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
                   <button
                     onClick={() => handleTicketChange(-1)}
-                    disabled={ticketCount <= 2}
+                    disabled={ticketCount <= 1}
                     className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-gray-200 to-gray-300 hover:from-gray-300 hover:to-gray-400 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:from-gray-200 disabled:hover:to-gray-300 flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md"
                   >
                     <Minus size={20} className="sm:w-6 sm:h-6" />

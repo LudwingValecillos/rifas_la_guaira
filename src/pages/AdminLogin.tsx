@@ -42,7 +42,7 @@ const AdminLogin = () => {
     }
   };
   useEffect(() => {
-    if (localStorage.getItem("jraffle_admin") === "true") {
+    if (localStorage.getItem("La Guaira_admin") === "true") {
       navigate("/admin");
     }
   }, []);

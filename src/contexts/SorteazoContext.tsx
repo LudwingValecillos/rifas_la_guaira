@@ -115,7 +115,7 @@ export const SorteazoProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   useEffect(() => {
-    const adminStatus = localStorage.getItem("jraffle_admin");
+    const adminStatus = localStorage.getItem("La Guaira_admin");
     if (adminStatus === "true") {
       setIsAdmin(true);
     }
@@ -308,7 +308,7 @@ export const SorteazoProvider: React.FC<{ children: React.ReactNode }> = ({
   const login = (username: string, password: string): boolean => {
     if (username === "administrador" && password === "luzmaria.2912") {
       setIsAdmin(true);
-      localStorage.setItem("jraffle_admin", "true");
+      localStorage.setItem("La Guaira_admin", "true");
       return true;
     }
     return false;
@@ -316,7 +316,7 @@ export const SorteazoProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const logout = () => {
     setIsAdmin(false);
-    localStorage.removeItem("jraffle_admin");
+    localStorage.removeItem("La Guaira_admin");
   };
 
   // Función para calcular tickets ocupados dinámicamente desde el array de usuarios

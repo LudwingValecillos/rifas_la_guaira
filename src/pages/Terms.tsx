@@ -191,7 +191,7 @@ const Terms = () => {
                 </h2>
                 <p className="text-orange-700 leading-relaxed">
                   <strong>
-                    Al participar en cualquier sorteo de JRaffle Company,
+                    Al participar en cualquier sorteo de La Guaira ,
                     automáticamente aceptas todos estos términos y condiciones.
                   </strong>{" "}
                   Es tu responsabilidad leer y comprender completamente estas

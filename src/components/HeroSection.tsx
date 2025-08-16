@@ -1,54 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Trophy, Clock, Users, DollarSign, Shield, Star, Instagram, CheckCircle } from 'lucide-react';
 import logo from "../../public/iamgenes/la guaria letras amarilals fondo lguaria.jpg";
+import auto from "../../public/iamgenes/auto.png";
+import iphone from "../../public/iamgenes/iphonehero.png";
+
+
+
 
 export default function HeroSection() {
-  const [liveParticipants, setLiveParticipants] = useState(4237);
-  const [jackpot, setJackpot] = useState(850000);
-  const [timeLeft, setTimeLeft] = useState({ hours: 3, minutes: 42, seconds: 15 });
 
-  useEffect(() => {
-    // Simulador de participantes en vivo
-    const participantInterval = setInterval(() => {
-      if (Math.random() > 0.6) {
-        setLiveParticipants(prev => prev + Math.floor(Math.random() * 3) + 1);
-      }
-    }, 4000);
 
-    // Simulador de incremento de jackpot
-    const jackpotInterval = setInterval(() => {
-      setJackpot(prev => prev + Math.floor(Math.random() * 2500) + 500);
-    }, 6000);
+  
 
-    // Countdown timer
-    const timerInterval = setInterval(() => {
-      setTimeLeft(prev => {
-        let newSeconds = prev.seconds - 1;
-        let newMinutes = prev.minutes;
-        let newHours = prev.hours;
-
-        if (newSeconds < 0) {
-          newSeconds = 59;
-          newMinutes -= 1;
-        }
-        if (newMinutes < 0) {
-          newMinutes = 59;
-          newHours -= 1;
-        }
-        if (newHours < 0) {
-          return { hours: 3, minutes: 42, seconds: 15 }; // Reset para demo
-        }
-
-        return { hours: newHours, minutes: newMinutes, seconds: newSeconds };
-      });
-    }, 1000);
-
-    return () => {
-      clearInterval(participantInterval);
-      clearInterval(jackpotInterval);
-      clearInterval(timerInterval);
-    };
-  }, []);
 
   return (
     <div className="p-10 sm:p-10  dark:bg-gray-900 dark:text-white bg-white text-black flex items-center justify-center overflow-hidden relative" style={{backgroundImage: `url(${logo})`}}>
@@ -101,7 +64,8 @@ export default function HeroSection() {
           </div>
 
           <div className="relative flex items-center sm:m-10">
-            <div className="absolute -top-10 md:-top-20 -left-10 sm:w-32 sm:h-32 lg:w-64 lg:h-64 bg-yellow-500 rotate-12 rounded-lg border-yellow-700 border-b-4 border-r-8 max-sm:hidden opacity-80">
+            <div className="absolute -top-10 md:-top-20 -left-10 sm:w-32 sm:h-32 lg:w-64 lg:h-64 bg-yellow-500 rotate-12 rounded-lg border-yellow-700 border-b-4 border-r-8 max-sm:hidden opacity-90">
+              <img src={auto} alt=""  className='p-1 rounded-xl'/>
             </div>
             
             <div className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 border border-yellow-500/30 p-4 sm:p-6 -right-1/2 -translate-x-1/2 grow text-center shadow-2xl -rotate-2 rounded-xl text-nowrap border-slate-950 border-b-4 border-r-8 backdrop-blur-sm">
@@ -127,8 +91,9 @@ export default function HeroSection() {
              
             </div>
             
-            <div className="absolute -bottom-10 md:-bottom-20 -right-16 sm:w-32 sm:h-32 lg:w-64 lg:h-64 bg-yellow-500 -rotate-12 rounded-lg border-yellow-700 border-r-4 border-b-8 max-sm:hidden opacity-80">
-            </div>
+            <div className="absolute -bottom-10 md:-bottom-20 -right-16 sm:w-32 sm:h-32 lg:w-64 lg:h-64 bg-yellow-500 -rotate-12 rounded-lg border-yellow-700 border-r-4 border-b-8 max-sm:hidden opacity-90">
+              <img src={iphone} alt=""  className='p-2 rounded-3xl
+              '/>            </div>
           </div>
         </div>
       </div>

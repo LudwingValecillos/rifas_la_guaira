@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       colors: {
-        // JRaffle Company Brand Colors
+        // La Guaira  Brand Colors
         "jr-navy": "#FECB00",
         "jr-brown": "#735A2C",
         "jr-gold": "#A68A56",

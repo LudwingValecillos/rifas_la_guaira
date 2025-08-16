@@ -140,7 +140,7 @@ const Index = () => {
                   return (
                     <div
                       key={raffle.id}
-                      className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+                      className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 overflow-hidden group shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
                     >
                       {isLowStock && (
                         <div className="bg-red-500 text-white text-center py-2 font-bold text-sm">

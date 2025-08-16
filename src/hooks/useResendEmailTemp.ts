@@ -147,7 +147,7 @@ export const useResendEmailTemp = () => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Confirmación de Compra - JRaffle Company</title>
+          <title>Confirmación de Compra - La Guaira </title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
@@ -175,7 +175,7 @@ export const useResendEmailTemp = () => {
     .important h4 { color: #92400e; margin-bottom: 20px; font-size: 20px; font-weight: 600; }
     .luck-message { text-align: center; font-size: 24px; margin: 50px 0 40px 0; padding: 25px; background: linear-gradient(135deg, #dcfce7, #bbf7d0); border-radius: 16px; color: #15803d; font-weight: 700; }
     .footer { background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 40px; text-align: center; color: #6b7280; }
-    .footer .company-name { font-weight: 700; color: #374151; font-size: 18px; margin-bottom: 15px; }
+    .footer .-name { font-weight: 700; color: #374151; font-size: 18px; margin-bottom: 15px; }
     .testing-banner { background: #ff6b6b; color: white; padding: 15px; text-align: center; font-weight: bold; margin-bottom: 20px; }
   </style>
 </head>
@@ -187,7 +187,7 @@ export const useResendEmailTemp = () => {
     <div class="container">
       <div class="header">
         <h1>¡Compra Confirmada!</h1>
-                        <p>Gracias por participar en JRaffle Company</p>
+                        <p>Gracias por participar en La Guaira </p>
       </div>
       
       <div class="content">
@@ -234,7 +234,7 @@ export const useResendEmailTemp = () => {
       </div>
 
       <div class="footer">
-                        <p class="company-name">© 2024 JRaffle Company</p>
+                        <p class="-name">© 2024 La Guaira </p>
         <p>Todos los derechos reservados</p>
       </div>
     </div>

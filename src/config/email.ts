@@ -5,7 +5,7 @@ export const EMAIL_CONFIG = {
 
   // Configuración del remitente (Resend requiere dominio verificado)
   SENDER: {
-    name: "JRaffle Company",
+    name: "La Guaira ",
     email: "onboarding@resend.dev", // Dominio por defecto de Resend
   },
 

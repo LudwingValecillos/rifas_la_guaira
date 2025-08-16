@@ -9,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   // Check if user is admin
-  const adminStatus = localStorage.getItem("jraffle_admin");
+  const adminStatus = localStorage.getItem("La Guaira_admin");
   const isAdmin = adminStatus === "true";
 
   const toggleMobileMenu = () => {
@@ -28,11 +28,11 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img
               src={logo}
-              alt="JRaffle Company"
+              alt="La Guaira "
               className="h-16 w-auto "
             />
             {/*<h1 className="text-2xl font-bold bg-gradient-to-r from-jr-gold to-jr-light-gold bg-clip-text text-transparent">
-              JRaffle Company
+              La Guaira 
             </h1>*/}
           </Link>
 

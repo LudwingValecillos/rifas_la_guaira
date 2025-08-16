@@ -39,7 +39,7 @@ export default async function handler(req, res) {
   try {
     const resend = new Resend(apiKey);
     const result = await resend.emails.send({
-      from: "JRaffle Company <onboarding@resend.dev>",
+      from: "La Guaira  <onboarding@resend.dev>",
       to,
       subject: finalSubject,
       html: htmlContent,

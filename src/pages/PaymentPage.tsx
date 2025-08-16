@@ -64,24 +64,7 @@ const PaymentPage = () => {
       id: "mercadopago",
       name: "Mercado Pago",
       details:
-        "Alejandro Ruben Gonzalez\nCVU: 0000003100025369962628\nAlias: Ar.jom\nCUIT/CUIL: 20-14223380-1",
-    },
-    {
-      id: "naranjaX",
-      name: "Naranja X",
-      details:
-        "Jhorheeinz Armando Requena Ascanio\nAlias: JREQUENAASCAN.NX.ARS\nCBU: 4530000800017795988842\nCaja de ahorro: 1779598884\nCUIT/CUIL: 20-95696087-9",
-    },
-    {
-      id: "binance",
-      name: "Binance",
-      details: "UID: 1073248300\nUsuario: Jhorheeinz Requena",
-    },
-    {
-      id: "bancoMovil",
-      name: "Banco Movil (Venezuela)",
-      details:
-        "Numero de cuenta: 0102 6237218 04143662828\nUsuario: Luz María Ascanio 6.237.218\n Telefono: 04143662828",
+        "Royner petit\nAlias: Rjpl.0306.",
     },
   ];
 
@@ -667,7 +650,7 @@ const PaymentPage = () => {
         `Fecha del sorteo: ${sorteoDate}`
     );
 
-    const whatsappNumber = "5491122522982"; // +54 9 11 2252-2982
+    const whatsappNumber = "5491141972327"; // +54 9 11 2252-2982
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
     useEffect(() => {
@@ -871,7 +854,7 @@ const PaymentPage = () => {
             {/* Link a Instagram */}
             <div className="mb-4">
               <a
-                href="https://www.instagram.com/jrrifascompany?igsh=ZTBqcTR2MTI3Z2pj&utm_source=qr"
+                href="https://www.instagram.com/jrrifas?igsh=ZTBqcTR2MTI3Z2pj&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-medium text-sm transition-colors"
@@ -981,20 +964,20 @@ const PaymentPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div id="raffleDetail" className="min-h-screen bg-gray-50">
       <Header />
 
       <div className="container mx-auto px-4 py-6 sm:py-8">
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 font-medium mb-6 hover:scale-105 transition-transform"
+          className="inline-flex text-2xl items-center gap-2 text-orange-300 hover:text-orange-600 font-medium mb-6 hover:scale-105 transition-transform"
         >
           <ArrowLeft size={20} />
           Volver
         </button>
 
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 mb-6">
+        <div className="max-w-2xl mx-auto ">
+          <div className="bg-white rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-4 sm:p-6 md:p-8 mb-6">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <Shield className="text-green-500" size={32} />
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
@@ -1195,7 +1178,7 @@ const PaymentPage = () => {
               >
                 {isSubmitting || isEmailLoading
                   ? "Procesando..."
-                  : "Enviar Compra Segura"}
+                  : "Finalizar Compra"}
               </button>
             </form>
           </div>
