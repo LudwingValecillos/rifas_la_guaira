@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Trophy, Shield, Award, Menu, X, Settings } from "lucide-react";
-import logo from "../../public/logojr.jpg";
+import logo from "../../public/iamgenes/icono recordado.jpg";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -22,20 +22,18 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-jr-navy shadow-lg border-b-4 border-jr-gold">
+    <header className="bg-jr-navy shadow-lg border-b-4 border-black">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
             <img
               src={logo}
               alt="JRaffle Company"
-              className="h-16 w-auto rounded-full"
+              className="h-16 w-auto "
             />
-            <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-jr-gold to-jr-light-gold bg-clip-text text-transparent">
-                JRaffle Company
-              </h1>
-            </div>
+            {/*<h1 className="text-2xl font-bold bg-gradient-to-r from-jr-gold to-jr-light-gold bg-clip-text text-transparent">
+              JRaffle Company
+            </h1>*/}
           </Link>
 
           {/* Desktop Navigation */}
@@ -69,7 +67,7 @@ const Header = () => {
             {isAdmin && (
               <button
                 onClick={handleAdminClick}
-                className="flex items-center gap-2 bg-gradient-to-r from-jr-brown to-jr-gold hover:from-jr-gold hover:to-jr-light-gold px-4 py-2 rounded-full border border-jr-brown transition-all duration-300 group hover:scale-105"
+                className="flex items-center gap-2 bg-black px-4 py-2 rounded-full border border-black transition-all duration-300 group hover:scale-105"
                 title="Panel de Super Admin"
               >
                 <Settings
@@ -83,9 +81,9 @@ const Header = () => {
             )}
 
             {/* Trust Badge */}
-            <div className="flex items-center gap-2 bg-jr-brown px-4 py-2 rounded-full border border-jr-gold">
-              <Award className="text-jr-light-gold" size={16} />
-              <span className="text-jr-light-gold text-sm font-medium">
+            <div className="flex items-center gap-2 bg-black px-4 py-2 rounded-full border border-black">
+              <Award className="text-white" size={16} />
+              <span className="text-white text-sm font-medium">
                 Verificado
               </span>
             </div>

@@ -83,12 +83,12 @@ export const saveRifa = async () => {
     ],
   };
 
-  await setDoc(doc(db, "rifas", rifaData.id), rifaData);
+  await setDoc(doc(db, "guaria", rifaData.id), rifaData);
 };
 
 export const getAllRifas = async () => {
   try {
-    const ref = collection(db, "rifas");
+    const ref = collection(db, "guaria");
     const snap = await getDocs(ref);
 
     const rifas = snap.docs.map((doc) => ({
@@ -105,7 +105,7 @@ export const getAllRifas = async () => {
 
 export const createRifa = async (id: string, data: RaffleData) => {
   try {
-    await setDoc(doc(db, "rifas", id), data);
+    await setDoc(doc(db, "guaria", id), data);
     console.log("Rifa creada con éxito");
   } catch (error) {
     console.error("Error al crear rifa:", error);
@@ -123,7 +123,7 @@ export const updateRifa = async (
   updatedFields: Partial<Record<string, unknown>>
 ) => {
   try {
-    await updateDoc(doc(db, "rifas", id), updatedFields);
+    await updateDoc(doc(db, "guaria", id), updatedFields);
     console.log("Rifa actualizada con éxito");
   } catch (error) {
     console.error("Error al actualizar rifa:", error);
@@ -140,7 +140,7 @@ export const updateRifa = async (
 }
 export const addUserToRifa = async (rifaId: string, user: User) => {
   try {
-    const ref = doc(db, "rifas", rifaId);
+    const ref = doc(db, "guaria", rifaId);
     const snap = await getDoc(ref);
 
     if (!snap.exists()) throw new Error("La rifa no existe");
@@ -160,7 +160,7 @@ export const addUserToRifa = async (rifaId: string, user: User) => {
 // Nueva función para eliminar un usuario específico de una rifa por índice
 export const removeUserFromRifa = async (rifaId: string, userIndex: number) => {
   try {
-    const ref = doc(db, "rifas", rifaId);
+    const ref = doc(db, "guaria", rifaId);
     const snap = await getDoc(ref);
 
     if (!snap.exists()) throw new Error("La rifa no existe");
@@ -191,7 +191,7 @@ export const removeUserFromRifa = async (rifaId: string, userIndex: number) => {
 
 export const deleteRifa = async (id: string) => {
   try {
-    await deleteDoc(doc(db, "rifas", id));
+    await deleteDoc(doc(db, "guaria", id));
     console.log("Rifa eliminada con éxito");
   } catch (error) {
     console.error("Error al eliminar rifa:", error);
@@ -252,14 +252,14 @@ export const uploadImageToImageKit = async (file) => {
 // Nueva función para obtener una rifa específica por ID
 export const getRifaById = async (id: string) => {
   try {
-    const ref = doc(db, "rifas", id);
+    const ref = doc(db, "guaria", id);
     const snap = await getDoc(ref);
 
     if (!snap.exists()) {
       console.error("La rifa no existe");
       return null;
     }
-
+    
     return {
       id: snap.id,
       ...snap.data(),

@@ -20,10 +20,10 @@ export default {
     extend: {
       colors: {
         // JRaffle Company Brand Colors
-        "jr-navy": "#162C40",
+        "jr-navy": "#FECB00",
         "jr-brown": "#735A2C",
         "jr-gold": "#A68A56",
-        "jr-light-gold": "#D9BB84",
+        "jr-light-gold": "#000000",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

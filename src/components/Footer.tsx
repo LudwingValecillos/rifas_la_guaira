@@ -7,10 +7,11 @@ import {
   Facebook,
   Instagram,
 } from "lucide-react";
+import logo from "../../public/iamgenes/icono_recordado_2-removebg-preview.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-jr-navy to-black text-white">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-8 sm:py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -18,16 +19,14 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
             <div className="flex flex-col items-center sm:items-start space-y-4">
               <img
-                src="/logojr.jpg"
+                src={logo}
                 alt="JRaffle Company"
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full"
+                className="w-auto h-20 "
               />
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                  JRaffle Company
-                </h3>
+                
                 <p className="text-gray-300 text-sm mb-4 max-w-xs">
-                  JRaffle Company es una plataforma verificada para rifas y
+                  La Guaira Rifas es una plataforma verificada para rifas y
                   sorteos online
                 </p>
               </div>
@@ -97,7 +96,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-3">
         
               <a
-                href="https://www.instagram.com/jrrifascompany?igsh=ZTBqcTR2MTI3Z2pj&utm_source=qr"
+                href="https://www.instagram.com/rifaslaguaira2025/"
                 className="flex items-center justify-center sm:justify-start gap-3 text-gray-300 hover:text-pink-400 transition-colors duration-200 group"
               >
                 <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
@@ -107,7 +106,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://wa.me/+5491122522982"
+                href="https://wa.me/+5491141972327"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center sm:justify-start gap-3 text-gray-300 hover:text-green-400 transition-colors duration-200 group"

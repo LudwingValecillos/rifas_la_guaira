@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
@@ -91,6 +94,62 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+/* Contenedor principal */
+#sorteos {
+  position: relative; /* Clave para posicionar el ::before correctamente */
+  overflow: hidden; /* Opcional, pero bueno para evitar desbordes del blur */
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* El pseudoelemento que actuará como nuestro fondo */
+#sorteos::before {
+  content: ''; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+
+  /* Degradado blanco -> negro + imagen */
+  background-image: 
+  linear-gradient(to bottom, rgba(100,100,100,0.5), rgba(0,0,0,10)),
+    url('./iamgenes/2.webp');
+
+  background-size: cover;
+  background-position: center;
+
+
+  z-index: -1; 
+}
+
+
+/* Estilos para el contenido, para que sea visible sobre el fondo oscuro */
+#sorteos .contenido-seccion {
+  position: relative; /* Asegura que respete el z-index */
+  z-index: 2;
+  text-align: center;
+}
+
+/* inter-latin-wght-normal */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/rubik:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@layer components {
+  body {
+    @apply bg-blue-200 dark:bg-blue-950;
+  }
+}
+
 
 @layer base {
   * {
