@@ -39,7 +39,7 @@ const Footer = () => {
                     Plataforma Verificada
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-jr-gold">
+                <div className="flex items-center gap-2 text-[#FECB00]">
                   <Award size={16} />
                   <span className="text-sm font-medium">Sorteos Legales</span>
                 </div>
@@ -82,7 +82,7 @@ const Footer = () => {
               <p>Sorteos transparentes</p>
               <p>Premios garantizados</p>
               <p>Soporte 24/7</p>
-              <p className="text-jr-gold font-medium">
+              <p className="text-[#FECB00] font-medium">
                 ¡Juega responsablemente!
               </p>
             </div>
@@ -127,10 +127,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-jr-brown mt-8 pt-6">
+        <div className="border-t border-[#FECB00] mt-8 pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
             <p className="text-gray-400 text-xs sm:text-sm">
-              © 2025 JRaffle Company. Todos los derechos reservados.
+              © 2025 La Guaira. Todos los derechos reservados.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm">
