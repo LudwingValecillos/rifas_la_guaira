@@ -41,7 +41,7 @@ const Terms = () => {
                 </div>
                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                   Cada participante debe comprar un{" "}
-                  <strong>mínimo de 2 boletos</strong> por sorteo. No se
+                  <strong>mínimo de 1 boleto</strong> por sorteo. No se
                   permiten compras de boletos individuales. Esta política
                   garantiza la equidad y viabilidad de todos nuestros sorteos.
                 </p>
@@ -64,12 +64,12 @@ const Terms = () => {
                     <strong>Mercado Pago:</strong> Transferencias y pagos
                     digitales
                   </li>
-                  <li>
+                  {/* <li>
                     <strong>Brubank:</strong> Transferencias bancarias
                   </li>
                   <li>
                     <strong>Binance:</strong> Pagos con criptomonedas
-                  </li>
+                  </li> */}
                 </ul>
                 <p className="text-gray-700 mt-4">
                   <strong>Importante:</strong> No aceptamos efectivo, otros

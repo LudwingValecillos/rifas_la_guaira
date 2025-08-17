@@ -14,6 +14,7 @@ import {
   Star,
   Award,
   TrendingUp,
+  TreePalm,
 } from "lucide-react";
 import { log } from "console";
 import { getAllRifas } from "@/apis/rifa";
@@ -100,11 +101,12 @@ const Index = () => {
     url('./iamgenes/2.webp')` }}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-12 px-4">
-            <Sparkles className="text-orange-500" size={32} />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white underline">
+            <TreePalm className="text-orange-50" size={32} />
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl  text-white underline font-extralight">
               Sorteos Disponibles
             </h2>
-            <Sparkles className="text-orange-500" size={32} />
+            <TreePalm className="text-orange-50" size={32} />
           </div>
 
           {raffles.filter((raffle) => raffle.status === "active").length ===

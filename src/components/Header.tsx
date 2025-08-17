@@ -102,7 +102,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-jr-brown border-t border-jr-gold shadow-lg">
+        <div className="md:hidden bg-[#eabb00] border-t border-jr-gold shadow-lg">
           <div className="container mx-auto px-4 py-3 space-y-4">
             <Link
               to="/"

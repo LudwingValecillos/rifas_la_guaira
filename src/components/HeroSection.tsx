@@ -36,7 +36,12 @@ export default function HeroSection() {
 
 
             <div className="mt-6 sm:mt-8 flex flex-wrap gap-4">
-              <a href="#participar" className="rounded-lg p-4 grow text-center bg-yellow-500 text-black font-bold uppercase text-sm tracking-widest hover:bg-yellow-600 transition-all duration-300 hover:scale-105 shadow-xl flex items-center justify-center gap-2">
+              <a href="#sorteos" onClick={(e) => {
+    e.preventDefault();
+    document.querySelector("#sorteos")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}  className="rounded-lg p-4 grow text-center bg-yellow-500 text-black font-bold uppercase text-sm tracking-widest hover:bg-yellow-600 transition-all duration-300 hover:scale-105 shadow-xl flex items-center justify-center gap-2">
                 <Trophy className="w-5 h-5" />
                 Participar Ahora
               </a>
@@ -71,10 +76,10 @@ export default function HeroSection() {
             <div className="relative z-10 bg-gradient-to-br from-gray-800 to-gray-900 border border-yellow-500/30 p-4 sm:p-6 -right-1/2 -translate-x-1/2 grow text-center shadow-2xl -rotate-2 rounded-xl text-nowrap border-slate-950 border-b-4 border-r-8 backdrop-blur-sm">
              
               
-              <h2 className="text-2xl sm:text-3xl font-bold uppercase text-yellow-400 mb-2">
+              <h2 className="text-xl sm:text-3xl font-bold uppercase text-yellow-400 mb-2">
                 Siguenos en instagram
               </h2>
-              <h3 className="text-2xl sm:text-3xl font-bold uppercase text-white mb-2">
+              <h3 className="text-xl sm:text-3xl font-bold uppercase text-white mb-2">
                 para ver los sorteos en vivo
               </h3>
   
