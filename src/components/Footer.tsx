@@ -124,8 +124,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1 text-gray-400 hover:text-jr-gold transition-colors duration-200 text-xs"
             >
-              <span>Desarrollado con</span>
-              <Heart className="text-red-500" size={10} />
+              <span>Desarrollado</span>
               <span>
                 por <span className="text-green-500">Next</span>
                 <span className="text-white">Code</span>
@@ -277,10 +276,9 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-400 hover:text-jr-gold transition-colors duration-200"
                 >
-                  <span>Desarrollado con</span>
-                  <Heart className="text-red-500" size={14} />
+                  
                   <span>
-                    por <span className="text-green-500">Next</span>
+                   Desarrollado por <span className="text-green-500">Next</span>
                     <span className="text-white">Code</span>
                   </span>
                 </a>

@@ -3,6 +3,7 @@ import { Trophy, Clock, Users, DollarSign, Shield, Star, Instagram, CheckCircle 
 import logo from "../../public/iamgenes/la guaria letras amarilals fondo lguaria.jpg";
 import auto from "../../public/iamgenes/auto.png";
 import iphone from "../../public/iamgenes/iphonehero.png";
+import { Link } from 'react-router-dom';
 
 
 
@@ -45,10 +46,10 @@ export default function HeroSection() {
                 <Trophy className="w-5 h-5" />
                 Participar Ahora
               </a>
-              <a href="#como-funciona" className="rounded-lg p-4 grow border text-center border-yellow-500 text-yellow-500 font-bold uppercase text-sm tracking-widest hover:bg-yellow-500 hover:text-black transition-all duration-300 flex items-center justify-center gap-2">
+              <Link to="/terminos" className="rounded-lg p-4 grow border text-center border-yellow-500 text-yellow-500 font-bold uppercase text-sm tracking-widest hover:bg-yellow-500 hover:text-black transition-all duration-300 flex items-center justify-center gap-2">
                 <Star className="w-5 h-5" />
                 Cómo Funciona
-              </a>
+              </Link>
             </div>
 
             {/* Trust Indicators */}

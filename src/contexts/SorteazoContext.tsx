@@ -306,7 +306,7 @@ export const SorteazoProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const login = (username: string, password: string): boolean => {
-    if (username === "administrador" && password === "luzmaria.2912") {
+    if (username.toLocaleLowerCase() === "laguairarifas2025" && password.toLocaleLowerCase() === "laguairarifas2025") {
       setIsAdmin(true);
       localStorage.setItem("La Guaira_admin", "true");
       return true;
