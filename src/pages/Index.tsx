@@ -46,7 +46,7 @@ const Index = () => {
       <HeroSection />
 
       {/* How it Works */}
-      <section className="py-12 sm:py-16 bg-white">
+      <section id="comofunciona" className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-6 sm:px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 text-center">
             ¿Cómo Funciona?
@@ -56,10 +56,10 @@ const Index = () => {
               <div className="bg-gradient-to-br from-orange-400 to-orange-600 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Gift className="text-white" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-800">
+              <h3 className="text-lg sm:text-xl font-bold mb-3">
                 1. Elige tu Sorteo
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              <p className=" text-sm sm:text-base leading-relaxed">
                 Selecciona el sorteo que más te guste de nuestra amplia variedad
                 de premios increíbles.
               </p>
@@ -69,11 +69,11 @@ const Index = () => {
               <div className="bg-gradient-to-br from-green-400 to-green-600 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Clock className="text-white" size={28} />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-800">
+              <h3 className="text-lg sm:text-xl font-bold mb-3">
                 2. Compra tus Boletos
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                Compra mínimo 2 boletos y envía tu comprobante de pago por
+              <p className=" text-sm sm:text-base leading-relaxed">
+                Compra tu boleto y envía tu comprobante de pago por
                 WhatsApp para confirmar.
               </p>
             </div>
@@ -85,7 +85,7 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-gray-800">
                 3. ¡Gana!
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              <p className=" text-sm sm:text-base leading-relaxed">
                 Espera el día del sorteo y podrías ser el afortunado ganador del
                 premio. ¡La suerte te espera!
               </p>
@@ -95,7 +95,9 @@ const Index = () => {
       </section>
       
       {/* Active Raffles */}
-      <section id="sorteos" className="contenido-seccion">
+      <section id="sorteos" className="contenido-seccion" style={{ backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: 
+  `linear-gradient(to bottom, rgba(100,100,100,0.5), rgba(0,0,0,10)),
+    url('./iamgenes/2.webp')` }}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-12 px-4">
             <Sparkles className="text-orange-500" size={32} />
